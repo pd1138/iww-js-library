@@ -8,18 +8,16 @@ var List = function(node, fuct){
 	};
 
 	this.buildEmptyList = function() {
-		var itm = document.createElement('li');
-		itm.innerHTML = 'no records found';
-		this.list.appendChild(itm);
-	};
+	var itm = document.createElement('li');
+	itm.innerHTML = 'no records found';
+	this.list.appendChild(itm);};
 
 	this.insertItems = function(itms){
 		if(this.list.getElementsByTagName('LI').length > 0){this.clearList();}
 		if(itms.length === 0){this.buildEmptyList(); return;}
 		for(var i=0; i<itms.length; i+=1){
-			var newItm = this.addItems(itms[i]);
-			this.list.appendChild(newItm);
-		}
+		var newItm = this.addItems(itms[i]);
+		this.list.appendChild(newItm);}
 	};
 };
 //]]>
